@@ -1,0 +1,48 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import Button from "@/shortcodes/Button";
+import CustomButton from "../CustomButton.astro";
+
+const { cta } = Astro.props;
+---
+
+<section
+  class="py-20 md:py-36 lg:pt-40 lg:pb-44 bg-secondary relative overflow-hidden before:bg-[url('/images/pattern.png')] before:bg-cover before:bg-no-repeat before:w-full before:h-full before:absolute before:z-[1] before:opacity-60 before:top-0 before:left-0"
+  data-aos="fade-up-sm"
+  data-aos-delay="100"
+>
+  <div class="container relative z-[2]">
+    <h2
+      class="text-center max-xl:h3 text-light mb-14"
+      set:html={markdownify(cta.title)}
+      data-aos="fade-up-sm"
+      data-aos-delay="200"
+    />
+
+    <div
+      class="flex flex-col md:flex-row justify-center items-center mb-10"
+      data-aos="fade-up-sm"
+      data-aos-delay="300"
+    >
+      {
+        cta.button_1.enable && (
+          <CustomButton
+            link={cta.button_1.link}
+            label={cta.button_1.label}
+            variant="primary"
+          />
+        )
+      }
+      {
+        cta.button_2.enable && (
+          <Button
+            link={cta.button_2.link}
+            label={cta.button_2.label}
+            style="outline"
+            className="text-light"
+          />
+        )
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import CustomButton from "../CustomButton.astro";
+
+const { call_to_action } = Astro.props;
+---
+
+<div class="container">
+  <div class="px-5 py-10 lg:py-32 bg-theme-light rounded-xl">
+    <div class="row justify-center">
+      <div class="col-12 col-lg-10 text-center">
+        <h2
+          class="pb-4 max-xl:h3"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+          set:html={markdownify(call_to_action.title)}
+        />
+        <p
+          class="pb-8 text-dark/60"
+          data-aos="fade-up-sm"
+          data-aos-delay="200"
+          set:html={markdownify(call_to_action.description)}
+        />
+
+        {
+          call_to_action.button && (
+            <CustomButton
+              link={call_to_action.button.link}
+              label={call_to_action.button.label}
+              class="btn btn-primary"
+              data-aos="fade-up-sm"
+              data-aos-delay="300"
+            />
+          )
+        }
+      </div>
+    </div>
+  </div>
+</div>

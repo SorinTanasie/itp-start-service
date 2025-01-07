@@ -1,0 +1,38 @@
+---
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+import ImageMod from "../ImageMod.astro";
+
+const { section_5 } = Astro.props;
+---
+
+<div
+  class="bg-theme-light rounded-lg p-10 flex flex-col lg:flex-row"
+  data-aos="fade-up-sm"
+>
+  <div
+    class="w-full lg:w-1/2 flex flex-col lg:flex-col lg:justify-around max-lg:mb-6"
+    data-aos="fade-right-sm"
+  >
+    <div class="bg-accent rounded-full p-3 w-fit">
+      <DynamicIcon icon={section_5.icon} className="text-xl" />
+    </div>
+    <h4
+      class="max-xl:h5 max-lg:mb-6"
+      data-aos="fade-up-sm"
+      data-aos-delay="100"
+      set:html={markdownify(section_5.title)}
+    />
+    <p set:html={markdownify(section_5.content)} class="text-balance text-lg" />
+  </div>
+  <div class="w-full lg:w-1/2" data-aos="fade-left-sm">
+    <div>
+      <ImageMod
+        src={section_5.image}
+        alt={section_5.title}
+        width={574}
+        height={346}
+      />
+    </div>
+  </div>
+</div>

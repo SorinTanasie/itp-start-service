@@ -1,0 +1,49 @@
+{
+  "site": {
+    "title": "ITP start service",
+    "base_url": "https://blazex-astro.vercel.app/",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_width": "119",
+    "logo_height": "40",
+    "logo_text": "ITP start service"
+  },
+
+  "settings": {
+    "sticky_header": true,
+    "default_theme": "system",
+    "pagination": 2,
+    "summary_length": 200,
+    "blog_folder": "post"
+  },
+
+  "subscription": {
+    "enable": true,
+    "form_action": "#"
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "Copyright © 2025 All Rights Reserved by [ITP start service]"
+  },
+
+  "navigation_button": {
+    "enable": true,
+    "label": "0777 777 777",
+    "link": "tel:+40777777777"
+  },
+
+  "disqus": {
+    "enable": true,
+    "shortname": "themefisher-template",
+    "settings": {}
+  },
+
+  "metadata": {
+    "meta_author": "Themefisher",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Sass theme for Astro"
+  }
+}

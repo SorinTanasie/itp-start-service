@@ -1,0 +1,136 @@
+---
+import config from "@/config/config.json";
+import DynamicIcon from "@/helpers/DynamicIcon";
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import CallToAction from "@/partials/CallToAction.astro";
+import { getEntry } from "astro:content";
+
+const contact = await getEntry("contact", "-index");
+const { contact_form_action }: { contact_form_action: string } = config.params;
+const { title, description, meta_title, image, connect } = contact.data;
+
+const cta = await getEntry("sections", "call-to-action");
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+  <section class="section" data-aos="fade-up-sm">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-12" data-aos="fade-up-sm">
+          <h1
+            set:html={markdownify(title)}
+            class="text-center max-xl:h2 mb-6"
+          />
+          <p
+            set:html={markdownify(description)}
+            class="text-center text-balance"
+          />
+        </div>
+
+        <div class="col-12 md:col-10 mx-auto" data-aos="fade-up-sm">
+          <div class="p-8 md:p-16 shadow-lg rounded-2xl">
+            <form action={contact_form_action} method="POST">
+              <div class="row">
+                <div class="col-12">
+                  <div class="mb-6">
+                    <label for="f-name" class="form-label"> First Name </label>
+                    <input
+                      id="f-name"
+                      name="f-name"
+                      class="form-input"
+                      placeholder="Your First Name"
+                      type="text"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-6">
+                    <label for="l-name" class="form-label"> Last Name </label>
+                    <input
+                      id="l-name"
+                      name="l-name"
+                      class="form-input"
+                      placeholder="Your Last Name"
+                      type="text"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-6">
+                    <label for="email" class="form-label">
+                      Email Address
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      class="form-input"
+                      placeholder="Your Email Address"
+                      type="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-6">
+                    <label for="message" class="form-label"> Message </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="form-input"
+                      placeholder="How can we help you?"
+                      rows="8"
+                      required></textarea>
+                  </div>
+                </div>
+                <div class="col">
+                  <button type="submit" class="btn btn-primary w-full">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-12" data-aos="fade-up-sm">
+          <div class="row g-4 justify-around md:justify-center">
+            {
+              connect.map((c: any) => (
+                <div class="col-6 md:col-3 text-center" data-aos="fade-up-sm">
+                  <div class="mx-auto rounded-full w-fit bg-theme-light mb-5">
+                    <DynamicIcon
+                      icon={c.icon}
+                      className="text-secondary p-6 lg:p-[3.2rem] text-7xl lg:text-9xl"
+                    />
+                  </div>
+
+                  <p set:html={markdownify(c.key)} class="text-xl" />
+                  <p
+                    set:html={markdownify(c.value)}
+                    class="text-lg text-text/70"
+                  />
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <CallToAction cta={cta.data} /> -->
+
+  <section>
+    <div class="container">
+      <hr class="w-full border-b border-t-0 border-dark" />
+    </div>
+  </section>
+</Base>

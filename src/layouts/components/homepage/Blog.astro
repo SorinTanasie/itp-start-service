@@ -1,0 +1,56 @@
+---
+import config from "@/config/config.json";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import dateFormat from "@/lib/utils/dateFormat";
+import { markdownify } from "@/lib/utils/textConverter";
+import ImageMod from "../ImageMod.astro";
+import type { CollectionKey } from "astro:content";
+
+const { blog_folder } = config.settings;
+const posts = await getSinglePage(blog_folder as CollectionKey);
+---
+
+<section
+  class="section bg-theme-light"
+  data-aos="fade-up-sm"
+  data-aos-delay="100"
+>
+  <div class="container">
+    <h2 class="text-center mb-10" data-aos="fade-up-sm" data-aos-delay="200">
+      Aici e partea de blog
+    </h2>
+
+    <div class="row g-4">
+      {
+        posts.slice(0, 3).map((post: any, index: number) => (
+          <div
+            class="col-12 md:col-6 lg:col-4 h-full"
+            data-aos="fade-up-sm"
+            data-aos-delay={300 + index * 100}
+          >
+            <div class="bg-light relative border overflow-hidden rounded-2xl">
+              <ImageMod
+                width={416}
+                height={232}
+                src={post.data.image}
+                alt="Blog Image"
+                class="transition w-full aspect-video object-cover duration-300 group-hover:scale-110 rounded-inherit"
+              />
+
+              <div class="p-8 pt-6">
+                <p class="mb-5 text-lg text-tertiary">
+                  {dateFormat(post.data.date)}
+                </p>
+                <a
+                  href={`/${blog_folder}/${post.slug}`}
+                  class="after:absolute after:inset-0 font-semibold text-xl"
+                  set:html={markdownify(post.data.title)}
+                />
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

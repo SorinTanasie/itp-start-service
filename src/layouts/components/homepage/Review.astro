@@ -1,0 +1,53 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry } from "astro:content";
+import { FaStar } from "react-icons/fa6";
+
+const review = await getEntry("sections", "review");
+
+const { reviews } = review.data;
+---
+
+<div class="row lg:gx-5 max-lg:gy-3">
+  {
+    reviews.map((r: any, i: number) => (
+      <div
+        class="col-12 lg:col-6"
+        data-aos="fade-up-sm"
+        data-aos-delay={200 + i * 100}
+      >
+        <div
+          class={`p-10 border border-dark rounded-lg ${(i + 1) % 2 !== 0 && "bg-accent"}`}
+        >
+          <h4
+            set:html={markdownify(r.comment)}
+            class="text-3xl mb-6 before:content-['“'] after:content-['”']"
+          />
+          <div class="flex items-center">
+            <p
+              set:html={markdownify(r.user)}
+              class="text-lg font-semibold after:content-[','] after:mr-2"
+            />
+            <p set:html={markdownify(r.designation)} class="text-lg" />
+          </div>
+
+          <hr class="my-7 border border-dark opacity-15" />
+
+          <div class="flex items-center justify-between">
+            <p class="text-xl font-medium">
+              {r.rating} -
+              <span>
+                {r.rating > 4 ? "Excellent" : r.rating > 3 ? "Good" : "Bad"}
+              </span>
+            </p>
+            <div class="flex items-center">
+              {[...Array(Math.ceil(r.rating))].map(() => (
+                <FaStar className="text-lg text-dark mr-1" />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</div>

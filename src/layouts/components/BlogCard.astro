@@ -1,0 +1,41 @@
+---
+import config from "@/config/config.json";
+import dateFormat from "@/lib/utils/dateFormat";
+import ImageMod from "./ImageMod.astro";
+
+const { blog_folder }: { blog_folder: string } = config.settings;
+
+const { blog } = Astro.props;
+
+const { title, image, date, index } = blog.data;
+---
+
+<div
+  class="col-12 md:col-6"
+  data-aos="fade-up-sm"
+  data-aos-delay={`${index * 200}`}
+>
+  <div class="relative h-fit group hover:cursor-pointer">
+    <ImageMod
+      src={image}
+      alt={title}
+      width={624}
+      height={536}
+      class="w-full h-5/6 aspect-square rounded-xl object-cover"
+    />
+
+    <div
+      class="absolute top-0 left-1/2 transform translate-y-[25%] -translate-x-1/2 rounded-2xl px-6 py-4 mx-auto w-[80%] bg-body"
+    >
+      <p class="hidden lg:block mb-3 text-tertiary text-lg">
+        {dateFormat(date)}
+      </p>
+      <h2 class="font-semibold text-xl lg:text-4xl">{title}</h2>
+    </div>
+
+    <a
+      href={`/${blog_folder}/${blog.slug}`}
+      class="absolute inset-0 rounded-xl"
+      aria-label={title}></a>
+  </div>
+</div>

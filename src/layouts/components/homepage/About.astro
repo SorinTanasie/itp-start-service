@@ -1,0 +1,81 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import { TiTick } from "react-icons/ti";
+import ImageMod from "../ImageMod.astro";
+import Counter from "../functional-component/Counter";
+
+const { about } = Astro.props;
+---
+
+<section class="section" data-aos="fade-up-sm" data-aos-delay="100">
+  <div class="container">
+    <div class="row max-lg:gy-5 items-center">
+      <div class="col-12 lg:col-6" data-aos="fade-up-sm" data-aos-delay="200">
+        <div class="relative">
+          <ImageMod
+            src={about.image.image}
+            alt="about"
+            width={518}
+            height={553}
+            class="h-full max-lg:mx-auto"
+          />
+          <div
+            class="absolute bottom-10 left-24 lg:left-10 flex flex-col gap-2"
+          >
+            {
+              about.image.point.map((item: string) => (
+                <div class="flex items-center mb-1 last:mb-0 bg-light w-fit rounded-full p-3 py-1">
+                  <TiTick className="text-light bg-tertiary rounded-full mr-2 text-lg max-lg:text-xs" />
+                  <p
+                    set:html={markdownify(item)}
+                    class="text-lg max-lg:text-xs"
+                  />
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+      <div class="col-12 lg:col-6" data-aos="fade-up-sm" data-aos-delay="300">
+        <h2
+          set:html={markdownify(about.title)}
+          class="mb-4 max-xl:h3 max-lg:text-center"
+        />
+        <p
+          set:html={markdownify(about.content_1)}
+          class="mb-4 max-lg:text-center"
+        />
+        <p
+          set:html={markdownify(about.content_2)}
+          class="text-text/60 text-[20px] max-lg:text-center"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section pt-0" data-aos="fade-up-sm" data-aos-delay="400">
+  <div class="container">
+    <div class="row max-lg:g-4 items-center justify-between">
+      {
+        about.achievements.map((a: any) => (
+          <div
+            class="col-12 md:col-6 lg:col-3 p-0"
+            data-aos="fade-up-sm"
+            data-aos-delay="500"
+          >
+            <div class="flex items-center w-fit mx-auto gap-4">
+              <h2 class="max-xl:h3 text-tertiary">
+                <Counter start={0} end={a.key} suffix={a.suffix} client:load />
+              </h2>
+              <p
+                set:html={markdownify(a.value)}
+                class="text-lg w-full max-w-[130px]"
+              />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section> -->

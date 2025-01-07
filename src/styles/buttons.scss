@@ -1,0 +1,23 @@
+.btn {
+  @apply inline-block rounded-full px-7 py-4 border-none text-base font-normal capitalize transition duration-300;
+}
+
+.btn-sm {
+  @apply px-4 py-1.5 text-sm;
+}
+
+.btn-primary {
+  @apply bg-secondary border-secondary text-white;
+}
+
+.btn-outline-primary {
+  @apply text-dark border-transparent bg-transparent;
+}
+
+.btn-secondary {
+  @apply bg-accent border-accent text-dark;
+}
+
+.btn-outline-secondary {
+  @apply text-white border-white bg-transparent;
+}

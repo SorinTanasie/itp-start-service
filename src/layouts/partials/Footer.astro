@@ -1,0 +1,60 @@
+---
+import config from "@/config/config.json";
+import menu from "@/config/menu.json";
+import { markdownify } from "@/lib/utils/textConverter";
+import { Image } from "astro:assets";
+
+const { copyright } = config.params;
+---
+
+<footer class="section" data-aos="fade-up-sm" data-aos-delay="100">
+  <div class="container">
+    <div class="row gx-4">
+      <div class="col-12 lg:col-4" data-aos="fade-up-sm" data-aos-delay="200">
+        <div class="mb-10 lg:mb-8">
+          <Image
+            src="/images/logo.png"
+            class="mb-6"
+            width={101}
+            height={34}
+            alt="banner image"
+          />
+          <p class="mb-4 w-8/12 md:text-balance text-lg text-text/70 lg:mb-8">
+            Cel mai bun itp
+          </p>
+        </div>
+      </div>
+      <div class="col-12 lg:col-8" data-aos="fade-up-sm" data-aos-delay="300">
+        <div class="mb-10 lg:mb-8">
+          <div class="row max-md:gy-4 justify-end">
+            {
+              menu.footer.map((menu, index) => (
+                <div
+                  class="col-6 md:col-3 pr-0"
+                  data-aos="fade-up-sm"
+                  data-aos-delay={400 + index * 100}
+                >
+                  <h5 class="mb-7 font-medium text-lg lg:mb-6">{menu.title}</h5>
+                  <ul>
+                    {menu.children.map((child) => (
+                      <li class="mb-4 text-text/70 text-lg hover:text-secondary">
+                        <a href={child.url}>{child.name}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p
+      class="text-lg text-text/70"
+      set:html={markdownify(copyright)}
+      data-aos="fade-up-sm"
+      data-aos-delay="500"
+    />
+  </div>
+</footer>

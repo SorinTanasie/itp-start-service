@@ -1,0 +1,68 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import Button from "@/shortcodes/Button";
+import { Icon } from "astro-icon/components";
+import ImageMod from "../ImageMod.astro";
+
+const { section_2 } = Astro.props;
+---
+
+<section class="section pt-0" data-aos="fade-up-sm">
+  <div class="container">
+    <div class="row max-lg:gy-5 items-stretch">
+      <div class="col-12 lg:col-6 order-2 lg:order-1" data-aos="fade-right-sm">
+        <div class="flex flex-col justify-between h-full">
+          <div>
+            <p
+              set:html={markdownify(section_2.badge)}
+              class="mb-4 max-lg:text-center text-tertiary"
+            />
+            <h2
+              set:html={markdownify(section_2.title)}
+              class="mb-4 max-xl:h3 max-lg:text-center"
+            />
+            <p
+              set:html={markdownify(section_2.content)}
+              class="mb-4 max-lg:text-center text-text/70"
+            />
+          </div>
+
+          <div>
+            {
+              section_2.features.map((item: string) => (
+                <div class="flex items-center mb-4 last:mb-0 bg-light w-fit rounded-full p-3 py-1">
+                  <Icon name="tick" class="text-tertiary mr-3 text-lg" />
+                  <p set:html={markdownify(item)} class="text-xl" />
+                </div>
+              ))
+            }
+
+            <Button
+              label={section_2.button.label}
+              link={section_2.button.link}
+              className="mt-6 lg:mt-10"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-12 lg:col-6 order-1 lg:order-2" data-aos="fade-left-sm">
+        <div class="relative bg-tertiary h-full rounded-lg">
+          <ImageMod
+            src={section_2.image_1}
+            alt="about"
+            width={0}
+            height={0}
+            class="h-full mx-auto"
+          />
+          <ImageMod
+            src={section_2.image_2}
+            alt="about"
+            width={462}
+            height={236}
+            class="hidden md:block absolute bottom-0 left-0 transform translate-x-[-10%] translate-y-[10%]"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

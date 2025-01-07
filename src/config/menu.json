@@ -1,0 +1,40 @@
+{
+  "main": [
+    {
+      "name": "Servicii",
+      "url": "/services"
+    },
+    {
+      "name": "Despre noi",
+      "url": "/about"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    }
+  ],
+  "footer": [
+    {
+      "title": "Companie",
+      "children": [
+        {
+          "name": "About",
+          "url": "/about"
+        },
+        {
+          "name": "Contact",
+          "url": "/contact"
+        }
+      ]
+    },
+    {
+      "title": "Servicii",
+      "children": [
+        {
+          "name": "Servicii",
+          "url": "/servicii"
+        }
+      ]
+    }
+  ]
+}

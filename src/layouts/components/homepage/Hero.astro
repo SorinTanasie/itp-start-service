@@ -1,0 +1,63 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import Button from "@/shortcodes/Button";
+import { FaStar } from "react-icons/fa6";
+import ImageMod from "../ImageMod.astro";
+import CustomButton from "../CustomButton.astro";
+
+const { hero, brand } = Astro.props;
+---
+
+<section
+  class="section overflow-x-hidden"
+  data-aos="fade-up-sm"
+  data-aos-delay="100"
+>
+  <div class="container">
+    <div class="row max-lg:gy-5 items-stretch">
+      <div class="col-12 lg:col-7" data-aos="fade-up-sm" data-aos-delay="200">
+        <h1
+          set:html={markdownify(hero.title)}
+          class="max-xl:h2 mb-6 max-lg:text-center"
+        />
+        <p
+          set:html={markdownify(hero.content)}
+          class="mb-10 text-2xl max-lg:text-center"
+        />
+        <div class="flex flex-col lg:flex-row items-center mb-10">
+          {
+            hero.button_1.enable && (
+              <CustomButton
+                link={hero.button_1.link}
+                label={hero.button_1.label}
+              />
+            )
+          }
+        </div>
+      </div>
+      <div class="col-12 lg:col-5" data-aos="fade-up-sm" data-aos-delay="300">
+        <div class="relative h-full">
+          <div
+            class="max-lg:hidden w-[800px] absolute top-o right-0 translate-x-[60%] -translate-y-[80%]"
+          >
+            <ImageMod
+              src="/images/homepage/green-pattern.png"
+              alt="green pattern"
+              width={1200}
+              height={280}
+              class="w-full"
+            />
+          </div>
+
+          <ImageMod
+            src={hero.image}
+            alt="hero"
+            width={970}
+            height={654}
+            class="lg:absolute top-0 left-0 h-fit lg:min-w-max shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] rounded-xl lg:-translate-x-12"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

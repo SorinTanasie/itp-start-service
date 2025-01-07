@@ -1,0 +1,88 @@
+---
+import config from "@/config/config.json";
+import { markdownify } from "@/lib/utils/textConverter";
+
+const { cta } = Astro.props;
+---
+
+<section class="section pt-0" data-aos="fade-up-sm">
+  <div class="container">
+    <div class="row max-lg:gy-4 max-lg:justify-center lg:items-center">
+      <div class="col-12 lg:col-6" data-aos="fade-up-sm">
+        <h2
+          set:html={markdownify(cta.title)}
+          class="max-xl:h3 max-lg:text-center mb-2"
+        />
+        <p
+          set:html={markdownify(cta.content)}
+          class="max-lg:text-center max-lg:text-balance text-xl text-text/70"
+        />
+      </div>
+      <div class="col-12 lg:col-6" data-aos="fade-up-sm">
+        <form
+          action={config.subscription.form_action}
+          method="post"
+          class="flex flex-col sm:flex-row justify-center gap-2 sm:relative"
+        >
+          <input
+            class="px-7 py-5 sm:w-full rounded-full border-dark bg-white text-dark focus:border-dark focus:ring-transparent"
+            placeholder="Your email address"
+            type="email"
+            name="subscribe"
+            autocomplete="off"
+            required
+          />
+          <button
+            type="submit"
+            class="sm:absolute sm:right-[4px] sm:top-1/2 sm:-translate-y-1/2 px-6 py-3 md:py-4 text-light bg-secondary rounded-full"
+            >Get Started Now</button
+          >
+
+          <svg
+            class="hidden md:absolute top-[-50px] right-[-62px]"
+            xmlns="http://www.w3.org/2000/svg"
+            width="279"
+            height="276"
+            fill="none"
+            ><g clip-path="url(#a)" opacity=".1"
+              ><mask
+                id="b"
+                width="122"
+                height="122"
+                x="78"
+                y="77"
+                maskUnits="userSpaceOnUse"
+                style="mask-type:luminance"
+                ><path
+                  fill="#fff"
+                  d="m199.481 138.536-59.574-61.064-61.064 59.573 59.574 61.064z"
+                ></path></mask
+              ><g
+                stroke="#5869FC"
+                stroke-miterlimit="10"
+                stroke-width="4"
+                mask="url(#b)"
+                ><path
+                  d="m83.951 111.665-1.993 161.908M91.446 104.354l-1.993 161.908M98.94 97.042 96.947 258.95M106.435 89.73l-1.994 161.909M113.929 82.42l-1.994 161.908M121.423 75.108l-2.001 161.915M128.917 67.796l-2.001 161.915M136.412 60.485l-2 161.915M143.906 53.174l-2 161.915M151.4 45.862l-2 161.915M158.895 38.55l-2.001 161.916M166.389 31.24l-2.001 161.915M173.883 23.928l-2.001 161.915M181.378 16.617l-2.001 161.915M188.872 9.306l-2.001 161.915M196.366 1.994l-2 161.915"
+                ></path></g
+              ></g
+            ><defs
+              ><clipPath id="a"
+                ><path
+                  fill="#fff"
+                  d="m196.391 0 81.927 83.976L81.926 275.573 0 191.597z"
+                ></path></clipPath
+              ></defs
+            ></svg
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <hr class="w-full border-b border-t-0 border-dark" />
+  </div>
+</section>

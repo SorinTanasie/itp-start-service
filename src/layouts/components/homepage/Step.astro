@@ -1,0 +1,56 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import CustomButton from "../CustomButton.astro";
+
+const { step } = Astro.props;
+---
+
+<section class="section bg-secondary">
+  <div class="container">
+    <h2
+      class="text-center max-xl:h3 text-light mb-14"
+      set:html={markdownify(step.title)}
+      data-aos="fade-up-sm"
+      data-aos-delay="200"
+    />
+    <div
+      class="flex flex-col lg:flex-row border border-border rounded-lg mb-14"
+    >
+      {
+        step.steps.map((s: any, index: number) => (
+          <div
+            class="step-card"
+            data-aos="fade-right-sm"
+            data-aos-delay={300 + index * 100}
+          >
+            <h4
+              set:html={markdownify(s.title)}
+              class="text-2xl text-light mb-2"
+            />
+            <p
+              set:html={markdownify(s.description)}
+              class="text-lg text-light/70"
+            />
+          </div>
+        ))
+      }
+    </div>
+    <div
+      class="flex justify-center
+            data-aos="
+      fade-up-sm"
+      data-aos-delay="1000"
+      "
+    >
+      {
+        step.button.enable && (
+          <CustomButton
+            label={step.button.label}
+            link={step.button.link}
+            variant="primary"
+          />
+        )
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import CustomButton from "../CustomButton.astro";
+import ImageMod from "../ImageMod.astro";
+
+const { caseItem, i, color } = Astro.props;
+---
+
+<div class="col-12" data-aos="fade-up-sm" data-aos-delay={`${i * 100}`}>
+  <div
+    class={`row my-6 md:my-14 rounded-md overflow-hidden ${i === 0 && "mt-0"}  ${i === 0 || color ? "bg-tertiary" : i === 1 ? "bg-text text-light" : "bg-accent"}`}
+  >
+    <div class="col-12 lg:col-7 p-0 min-h-full order-2 lg:order-1">
+      <div class="flex flex-col justify-between h-full p-10 md:p-20">
+        <div>
+          <p
+            set:html={markdownify(caseItem.data.badge)}
+            class="text-lg font-semibold mb-4"
+          />
+          <a href={`/case/${caseItem.slug}`} class="text-6xl font-bold">
+            {caseItem.data.title}
+          </a>
+          <p set:html={markdownify(caseItem.data.description)} class="mt-4" />
+        </div>
+        <div>
+          <hr
+            class={`border-t mt-24 mb-9 ${i === 1 ? "border-border" : "border-dark"}`}
+          />
+          <div class="row mb-12">
+            {
+              caseItem.data.stats.map((stat: any) => (
+                <div class="col-6 lg:col-4">
+                  <h3 set:html={markdownify(stat.value)} />
+                  <p set:html={markdownify(stat.key)} />
+                </div>
+              ))
+            }
+          </div>
+
+          <CustomButton
+            link={`/case/${caseItem.slug}`}
+            label={"Read Full Story"}
+            data-aos="fade-up-sm"
+            data-aos-delay="300"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-12 lg:col-5 p-5 pb-0 md:p-0 order-1 lg:order-2">
+      <ImageMod
+        src={caseItem.data.image}
+        alt={caseItem.data.title}
+        width={583}
+        height={70}
+        format="webp"
+        class="object-cover size-full rounded-md md:rounded-none"
+      />
+    </div>
+  </div>
+</div>

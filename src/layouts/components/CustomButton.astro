@@ -1,0 +1,14 @@
+---
+const { label, link, variant, className } = Astro.props;
+---
+
+<a
+  href={link}
+  class={`relative btn ${className} ${variant === "primary" ? "btn-secondary" : "btn-primary"} overflow-hidden group`}
+>
+  <span class="relative z-10">{label}</span>
+  <div
+    class={`absolute w-16 h-16 -left-16 -bottom-10 border-none rounded-full ${variant === "primary" ? "bg-light" : "bg-dark"} transition-all duration-[500ms] ease-in-out group-hover:w-[500%] group-hover:h-[500%]`}
+  >
+  </div>
+</a>
