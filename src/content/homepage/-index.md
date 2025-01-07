@@ -1,12 +1,12 @@
 ---
 hero:
-  title: "Boost productivity <br> with our powerful <br> BlazeX solution."
-  content: "BlazeX is driven by a shared commitment to excellence, and a relentless pursuit of customer success."
+  title: "IPT start service <br> cel mai bun"
+  content: "ITP is driven by a shared commitment to excellence, and a relentless pursuit of customer success."
   image: "/images/homepage/service.jpg"
   button_1:
     enable: true
-    label: "Get Started Now"
-    link: "/pricing"
+    label: "Contacteaza-ne"
+    link: "/contact"
   button_2:
     enable: true
     label: "Book A Free Demo"
