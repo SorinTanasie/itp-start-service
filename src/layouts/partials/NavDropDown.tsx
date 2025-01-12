@@ -7,7 +7,7 @@ const NavDropDown = ({ menu, pathname }: { menu: any; pathname: any }) => {
     setShowContent(!showContent);
   };
   return (
-    <li className="nav-item nav-dropdown group bg-theme-light">
+    <li className="nav-item nav-dropdown group max-lg:bg-theme-light">
       <div
         className={`inline-flex items-center nav-link ${
           (pathname === `${menu.url}/` || pathname === menu.url) && "active"
