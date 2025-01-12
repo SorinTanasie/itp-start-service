@@ -1,0 +1,73 @@
+---
+import Section1 from "@/components/features/Section1.astro";
+import Section2 from "@/components/features/Section2.astro";
+import Section3 from "@/components/features/Section3.astro";
+import Section4 from "@/components/features/Section4.astro";
+import Section5 from "@/components/features/Section5.astro";
+import Section6 from "@/components/features/Section6.astro";
+
+import Review from "@/components/homepage/Review.astro";
+import Testimonial from "@/components/homepage/Testimonial.astro";
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import CallToAction from "@/partials/CallToAction.astro";
+import { getEntry } from "astro:content";
+import Compare from "@/layouts/components/pricing/Compare.astro";
+
+const features = await getEntry("features", "-index");
+
+const call_to_action = await getEntry("sections", "call-to-action");
+
+const pricing = await getEntry("pricing", "-index");
+const { compare } = pricing.data;
+
+const {
+  title,
+  meta_title,
+  description,
+  hero,
+  section_1,
+  section_2,
+  section_3,
+  section_4,
+  section_5,
+  section_6,
+  review,
+} = features.data;
+---
+
+<Base title={title} meta_title={meta_title} description={description}>
+  <section class="section pb-0" data-aos="fade-up-sm">
+    <div class="container">
+      <h1
+        class="pb-4 max-xl:h2 text-center"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+        set:html={markdownify(hero.title)}
+      />
+      <p
+        class="pb-8 text-balance text-center text-text/70"
+        data-aos="fade-up-sm"
+        data-aos-delay="200"
+        set:html={markdownify(hero.content)}
+      />
+    </div>
+  </section>
+  <Section1 section_1={section_1} />
+
+  <Section2 section_2={section_2} />
+
+  <!-- Section 3 -->
+
+  <Section6 section_6={section_6} />
+  <section class="section">
+    <Compare compare={compare} />
+  </section>
+  <Testimonial />
+  <section>
+    <div class="container">
+      <hr class="w-full border-b border-t-0 border-dark" />
+    </div>
+  </section>
+
+</Base>

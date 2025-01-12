@@ -1,10 +1,24 @@
 ---
 const { label, link, variant, className } = Astro.props;
+
+const getVariant = ():string => {
+  switch(variant){
+    // I know but is already used across the project
+    case "primary":
+      return "btn-primary";
+    case "secondary":
+      return "btn-secondary";
+    case "tertiary":
+      return "bg-red-500 text-white";
+    default:
+      return "btn-primary";
+  }
+}
 ---
 
 <a
   href={link}
-  class={`relative btn ${className} ${variant === "primary" ? "btn-secondary" : "btn-primary"} overflow-hidden group`}
+  class={`relative btn ${className} ${getVariant()} overflow-hidden group`}
 >
   <span class="relative z-10">{label}</span>
   <div

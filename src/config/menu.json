@@ -2,7 +2,22 @@
   "main": [
     {
       "name": "Servicii",
-      "url": "/services"
+      "url": "/servicii",
+      "hasChildren": true,
+      "children":[
+        {
+          "name": "ITP",
+          "url": "/servicii/itp"
+        },
+        {
+          "name": "Diagnoza Auto",
+          "url": "/servicii/diagnoza-auto"
+        },
+        {
+          "name": "Reglaj faruri",
+          "url": "/servicii/reglaj-faruri"
+        }
+      ]
     },
     {
       "name": "Despre noi",
@@ -33,6 +48,18 @@
         {
           "name": "Servicii",
           "url": "/servicii"
+        },
+        {
+          "name": "ITP",
+          "url": "/servicii/itp"
+        },
+        {
+          "name": "Diagnoza Auto",
+          "url": "/servicii/diagnoza-auto"
+        },
+        {
+          "name": "Reglaj faruri",
+          "url": "/servicii/reglaj-faruri"
         }
       ]
     }

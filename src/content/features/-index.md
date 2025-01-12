@@ -1,14 +1,14 @@
 ---
-title: "Features"
-meta_title: "Features"
+title: "Servicii"
+meta_title: "Servicii"
 description: "This is description"
 hero:
-  title: "Digital Payment"
-  content: "Themefisher gives you the blocks needed to create a truly professional website for your SaaS is a long established fact that a reader."
+  title: "Servicii ITP Start Service"
+  content: "ITP Start Service gives you the blocks needed to create a truly professional website for your SaaS is a long established fact that a reader."
 
 section_1:
-  title: "Innovate your way to success with BlazeX"
-  content: "Themefisher gives you the blocks needed to create a truly professional website for your SaaS."
+  title: "ITP"
+  content: "autoutilitare, auto, moto, Euro 6, 4x4"
   image: "/images/features/feature-1.png"
   highlights:
     - "Mobile app easy management and access"
@@ -24,8 +24,8 @@ section_1:
     link: "#"
 
 section_2:
-  badge: "Management"
-  title: "Arrange & optimize your payment"
+  badge: "Multi brand"
+  title: "Diagnoza auto"
   content: "Themefisher gives you the blocks needed to create a truly professional website for your SaaS."
   image_1: "/images/features/feature-2.png"
   image_2: "/images/features/feature-3.png"
@@ -60,4 +60,21 @@ section_5:
 review:
   title: "Trusted by leading <br> Startups in tech industry"
   content: "Themefisher gives you the blocks needed to create a truly professional website."
+
+section_6:
+  title: "Reglaj faruri"
+  content: "Themefisher gives you the blocks needed to create a truly professional website for your SaaS."
+  image: "/images/features/feature-1.png"
+  highlights:
+    - "Mobile app easy management and access"
+    - "Handle the card easily and safely"
+    - "Strong security system"
+  features:
+    - "Seamless searching"
+    - "Get top 5% experts for your project"
+    - "Protected payment system"
+  button:
+    enable: true
+    label: "Learn More"
+    link: "#"
 ---

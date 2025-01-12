@@ -67,129 +67,120 @@ plans:
           - Access to BlazeX Team
 
 compare:
-  title: "Compare plans & features"
+  title: "Preturi"
 
   plans:
-    - name: "Free"
-    - name: "Professional"
-    - name: "Organization"
+    - name: "Luna Ianuarie"
   pricing:
-    - "0/mo"
-    - "$99/mo"
-    - "Let’s Chat"
+    - "10% REDUCERE"
   buttons:
     - button:
         enable: true
-        label: "Get Started Now"
-        link: "/contact"
-    - button:
-        enable: true
-        label: "Get Started Now"
-        link: "/contact"
-    - button:
-        enable: true
-        label: "Contact Us"
-        link: "/contact"
+        label: "Suna acum!"
+        link: "tel:+4077777777"
 
   features:
-    - name: "Creation"
+    - name: "ITP"
       feature:
         - details:
-            - "Basic Tools"
-            - true
-            - true
-            - true
+            - "Autoutilitare"
+            - "240 Lei"
         - details:
-            - "Cloud Storage"
-            - "50GB"
-            - "100GB"
-            - "500GB"
+            - "Auto"
+            - "200 Lei"
         - details:
-            - "Ads Management"
-            - true
-            - true
-            - true
+            - "Moto"
+            - "180 Lei"
         - details:
-            - "Instant Data Refresh"
-            - false
-            - true
-            - true
+            - "Euro 6"
+            - "140 Lei"
         - details:
-            - "Creative Tools"
-            - 2
-            - 5
-            - 10
-        - details:
-            - "Weekly Reporting"
-            - false
-            - true
-            - true
-    - name: "Collaboration"
+            - "4x4"
+            - "140 Lei"
+    - name: "Diagnoza"
       feature:
         - details:
-            - "Live Editing"
-            - true
-            - true
-            - true
-        - details:
-            - "Email Storage"
-            - "10GB"
-            - "Unlimited"
-            - "Unlimited"
-        - details:
-            - "Team Management"
-            - false
-            - true
-            - true
-        - details:
-            - "Instant Commenting"
-            - false
-            - true
-            - true
-        - details:
-            - "Team Members"
-            - 2
-            - 5
-            - 10
-        - details:
-            - "Advanced Reporting"
-            - false
-            - true
-            - true
-    - name: "Blocks"
+            - "Diagnoza Auto"
+            - "140 lei"
+    - name: "Reglaj"
       feature:
         - details:
-            - "No. of blocks"
-            - "10GB"
-            - "Unlimited"
-            - "Unlimited"
-        - details:
-            - "Close Card Sorting"
-            - true
-            - true
-            - true
-        - details:
-            - "Clips"
-            - false
-            - true
-            - true
-        - details:
-            - "Open Card Sorting"
-            - false
-            - true
-            - true
-        - details:
-            - "Conditions"
-            - false
-            - 5
-            - 10
-        - details:
-            - "Legal  block"
-            - false
-            - true
-            - true
+            - "Reglaj faruri"
+            - "150 Lei"
 
 review:
   title: "Trusted by leading <br> Startups in tech industry"
   content: "Themefisher gives you the blocks needed to create a truly professional website."
----
+
+
+
+compareItp:
+  title: "Preturi"
+
+  plans:
+    - name: "Luna Ianuarie"
+  pricing:
+    - "10% REDUCERE"
+  buttons:
+    - button:
+        enable: true
+        label: "Suna acum!"
+        link: "tel:+4077777777"
+
+  features:
+      - feature:
+        - details:
+            - "Autoutilitare"
+            - "240 Lei"
+        - details:
+            - "Auto"
+            - "200 Lei"
+        - details:
+            - "Moto"
+            - "180 Lei"
+        - details:
+            - "Euro 6"
+            - "140 Lei"
+        - details:
+            - "4x4"
+            - "140 Lei"
+
+
+compareDiagnoza:
+  title: "Preturi"
+
+  plans:
+    - name: "Luna Ianuarie"
+  pricing:
+    - "10% REDUCERE"
+  buttons:
+    - button:
+        enable: true
+        label: "Suna acum!"
+        link: "tel:+4077777777"
+
+  features:
+    - feature:
+        - details:
+            - "Diagnoza Auto"
+            - "140 lei"
+
+compareReglajFaruri:
+  title: "Preturi"
+
+  plans:
+    - name: "Luna Ianuarie"
+  pricing:
+    - "10% REDUCERE"
+  buttons:
+    - button:
+        enable: true
+        label: "Suna acum!"
+        link: "tel:+4077777777"
+
+  features:
+    - feature:
+      - details:
+        - "Reglaj faruri"
+        - "150 Lei"
+

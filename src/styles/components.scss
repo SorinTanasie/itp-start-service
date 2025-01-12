@@ -193,10 +193,10 @@
 
   /* Additional mobile styling */
   @media (max-width: 768px) {
-    td,
-    th {
-      @apply block w-full;
-    }
+    // td,
+    // th {
+    //   @apply block w-full;
+    // }
   }
 }
 

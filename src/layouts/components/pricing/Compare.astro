@@ -11,36 +11,33 @@ const { compare } = Astro.props;
   </div>
 
   <!-- Desktop View -->
-  <div class="hidden md:block overflow-y-hidden">
+  <div class="overflow-y-hidden">
     <table class="pricing-table w-full mb-0" data-aos="fade-up-sm">
       <thead>
         <tr>
-          <th class="p-4"></th>
           {
             compare.plans.map((plan: any, index: number) => (
-              <th
-                class={`p-4 text-center ${index === 1 && "bg-theme-light rounded-t-lg"}`}
+              <div
+                class={`p-4 text-center w-full ${index === 1 && "bg-theme-light rounded-t-lg"}`}
               >
                 <p class="text-lg font-normal text-text/70">{plan.name}</p>
-              </th>
+              </div>
             ))
           }
         </tr>
         <tr>
-          <td class="p-4"></td>
           {
             compare.pricing.map((price: any, index: number) => (
-              <td class={`p-4 text-center ${index === 1 && "bg-theme-light"}`}>
+              <div class={`p-4 text-center ${index === 1 && "bg-theme-light"}`}>
                 <p class="text-3xl font-semibold">{price}</p>
-              </td>
+              </div>
             ))
           }
         </tr>
         <tr>
-          <th class="p-4"></th>
           {
             compare.buttons.map((button: any, index: number) => (
-              <th class={`p-4 text-center ${index === 1 && "bg-theme-light"}`}>
+              <div class={`p-4 text-center ${index === 1 && "bg-theme-light"}`}>
                 {button.button.enable && (
                   <a
                     href={button.button.link}
@@ -50,7 +47,7 @@ const { compare } = Astro.props;
                     rel="noopener noreferrer"
                   />
                 )}
-              </th>
+              </div>
             ))
           }
         </tr>
@@ -65,7 +62,7 @@ const { compare } = Astro.props;
                 data-aos-delay={`${index * 100}`}
               >
                 <td class={`p-4  ${index !== 0 && "pt-14"}`}>
-                  <p class="font-semibold text-lg">{feature.name}</p>
+                  <p class="font-semibold text-lg ">{feature.name}</p>
                 </td>
                 {Array(compare.plans.length)
                   .fill(null)
@@ -81,7 +78,7 @@ const { compare } = Astro.props;
                 >
                   {f.details.map((detail: any, index: number) => (
                     <td
-                      class={`p-4 ${index === 0 ? "text-left" : "text-center"} ${index === 2 && "bg-theme-light"}`}
+                      class={`p-4 ${index === 0 ? "text-left" : "text-center"} ${index === 1 && "bg-theme-light"}`}
                     >
                       <p class="text-lg">
                         {detail === true ? (
@@ -104,7 +101,7 @@ const { compare } = Astro.props;
   </div>
 
   <!-- Mobile View -->
-  <div class="md:hidden">
+  <!-- <div class="md:hidden">
     {
       compare.plans.map((plan: any, planIndex: number) => (
         <div
@@ -140,7 +137,7 @@ const { compare } = Astro.props;
               {feature.feature.map((f: any) => (
                 <div class="border-b flex items-center py-3">
                   <span class="text-gray-600 w-1/2">{f.details[0]}</span>
-                  <span class="w-1/2 text-center">
+                  <span class="w-1/2 text-center ">
                     {typeof f.details[planIndex + 1] === "boolean" ? (
                       f.details[planIndex + 1] ? (
                         <Icon name="tick" class="mx-auto" />
@@ -158,5 +155,5 @@ const { compare } = Astro.props;
         </div>
       ))
     }
-  </div>
+  </div> -->
 </div>
