@@ -5,9 +5,9 @@
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "",
-    "logo_width": "119",
-    "logo_height": "40",
+    "logo": "/images/itp_logo_resized_2.jpg",
+    "logo_width": "60",
+    "logo_height": "60",
     "logo_text": "ITP start service"
   },
 
