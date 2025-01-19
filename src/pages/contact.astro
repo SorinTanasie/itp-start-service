@@ -35,64 +35,98 @@ const cta = await getEntry("sections", "call-to-action");
 
         <div class="col-12 md:col-10 mx-auto" data-aos="fade-up-sm">
           <div class="p-8 md:p-16 shadow-lg rounded-2xl">
-            <form action={contact_form_action} method="POST">
+            <form
+              method="POST"
+              id="form"
+              class="needs-validation"
+              data-astro-reload
+              novalidate
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="4552e970-61df-42ea-ba74-d9ceb17f3719"
+              />
               <div class="row">
                 <div class="col-12">
                   <div class="mb-6">
-                    <label for="f-name" class="form-label"> First Name </label>
+                    <label for="f-name" class="form-label"> Prenume </label>
                     <input
                       id="f-name"
                       name="f-name"
                       class="form-input"
-                      placeholder="Your First Name"
+                      placeholder="Prenumele tau"
                       type="text"
                       required
                     />
+                    <div
+                      class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+                    >
+                      Te rugam sa introduci prenumele tau.
+                    </div>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="mb-6">
-                    <label for="l-name" class="form-label"> Last Name </label>
+                    <label for="l-name" class="form-label"> Nume </label>
                     <input
                       id="l-name"
                       name="l-name"
                       class="form-input"
-                      placeholder="Your Last Name"
+                      placeholder="Numele tau"
                       type="text"
                       required
                     />
+                    <div
+                      class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+                    >
+                      Te rugam sa introduci numele tau.
+                    </div>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="mb-6">
                     <label for="email" class="form-label">
-                      Email Address
+                      Adresa de email
                     </label>
                     <input
                       id="email"
                       name="email"
                       class="form-input"
-                      placeholder="Your Email Address"
+                      placeholder="Adresa ta de email"
                       type="email"
                       required
                     />
+                    <div class="empty-feedback text-red-400 text-sm mt-1">
+                      Te rugam sa introduci adresa ta de email.
+                    </div>
+                    <div class="invalid-feedback text-red-400 text-sm mt-1">
+                      Te rugam sa introduci o adresa de email valida.
+                    </div>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="mb-6">
-                    <label for="message" class="form-label"> Message </label>
+                    <label for="message" class="form-label"> Mesaj </label>
                     <textarea
                       id="message"
                       name="message"
                       class="form-input"
-                      placeholder="How can we help you?"
+                      placeholder="Cum te putem ajuta?"
                       rows="8"
                       required></textarea>
+
+                    <div
+                      class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+                    >
+                      Te rugam sa introduci mesajul tau.
+                    </div>
                   </div>
                 </div>
+                <div id="result" class="mt-3 text-center"></div>
                 <div class="col">
                   <button type="submit" class="btn btn-primary w-full">
-                    Send Message
+                    Trimite mesajul
                   </button>
                 </div>
               </div>
@@ -134,3 +168,86 @@ const cta = await getEntry("sections", "call-to-action");
     </div>
   </section>
 </Base>
+
+<style>
+  .invalid-feedback,
+  .empty-feedback {
+    display: none;
+  }
+
+  .was-validated :placeholder-shown:invalid ~ .empty-feedback {
+    display: block;
+  }
+
+  .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+    display: block;
+  }
+
+  .is-invalid,
+  .was-validated :invalid {
+    border-color: #dc3545;
+  }
+</style>
+
+<script astro:page-load>
+  // use astro:page-load event if you are using View Transitions
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+      const form = document.getElementById("form");
+      const result = document.getElementById("result");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        form.classList.add("was-validated");
+        if (!form.checkValidity()) {
+          form.querySelectorAll(":invalid")[0].focus();
+          return;
+        }
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        result.innerHTML = "Se trimite...";
+
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: json,
+        })
+          .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+              result.classList.add(
+                " text-white bg-green-500 p-4 mb-5 rounded-lg"
+              );
+              result.innerHTML =
+                "Am primit mesajul si te vom contacta in curand!";
+            } else {
+              console.log(response);
+              result.classList.add(
+                " text-white bg-red-500 p-4 mb-5 rounded-lg"
+              );
+              result.innerHTML = json.message;
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            result.innerHTML = "Ceva nu a functionat. Suna-ne!";
+          })
+          .then(function () {
+            form.reset();
+            form.classList.remove("was-validated");
+            setTimeout(() => {
+              result.style.display = "none";
+            }, 5000);
+          });
+      });
+    },
+    { once: true }
+  );
+</script>

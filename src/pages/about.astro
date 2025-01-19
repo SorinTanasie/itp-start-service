@@ -1,21 +1,12 @@
 ---
 import AboutCta from "@/components/about/AboutCta.astro";
 import Hero from "@/components/about/Hero.astro";
-import Offering from "@/components/about/Offering.astro";
-import Brand from "@/components/Brand.astro";
 import Base from "@/layouts/Base.astro";
 import { getEntry } from "astro:content";
 
 const about = await getEntry("about", "-index");
-const {
-  title,
-  description,
-  meta_title,
-  image,
-  hero,
-  offering,
-  call_to_action,
-} = about.data;
+const { title, description, meta_title, image, hero, call_to_action } =
+  about.data;
 ---
 
 <Base
@@ -25,10 +16,14 @@ const {
   image={image}
 >
   <Hero hero={hero} />
-  <!-- <Offering offering={offering} /> -->
-  <!-- <Brand /> -->
   <section class="section">
     <h2 class="text-center mb-9">Aici poze cu personalul?</h2>
   </section>
   <AboutCta call_to_action={call_to_action} />
+
+  <section>
+    <div class="container pt-8">
+      <hr class="w-full border-b border-t-0 border-dark" />
+    </div>
+  </section>
 </Base>

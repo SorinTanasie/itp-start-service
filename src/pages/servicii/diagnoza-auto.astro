@@ -13,6 +13,7 @@ import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
 import { getEntry } from "astro:content";
 import Compare from "@/layouts/components/pricing/Compare.astro";
+import AboutCta from "@/components/about/AboutCta.astro";
 
 const features = await getEntry("features", "-index");
 
@@ -20,6 +21,9 @@ const call_to_action = await getEntry("sections", "call-to-action");
 
 const pricing = await getEntry("pricing", "-index");
 const { compareDiagnoza } = pricing.data;
+
+const about = await getEntry("about", "-index");
+const { call_to_action: aboutCallToAction } = about.data;
 
 const {
   title,
@@ -60,4 +64,5 @@ const {
     <Compare compare={compareDiagnoza} />
   </section>
   <Testimonial />
+  <AboutCta call_to_action={aboutCallToAction} />
 </Base>

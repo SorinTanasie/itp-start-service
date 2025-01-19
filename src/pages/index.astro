@@ -1,46 +1,23 @@
 ---
 import CustomAccordion from "@/components/CustomAccordion";
-import About from "@/components/homepage/About.astro";
 import Blog from "@/components/homepage/Blog.astro";
 import Feature from "@/components/homepage/Feature.astro";
-import HomeCta from "@/components/homepage/HomeCta.astro";
-import Integration from "@/components/homepage/Integration.astro";
 import Step from "@/components/homepage/Step.astro";
 import Base from "@/layouts/Base.astro";
 import Hero from "@/layouts/components/homepage/Hero.astro";
-import Review from "@/layouts/components/homepage/Review.astro";
 import Testimonial from "@/layouts/components/homepage/Testimonial.astro";
-import { markdownify } from "@/lib/utils/textConverter";
 import { getEntry } from "astro:content";
 
 const homepage = await getEntry("homepage", "-index");
-const { hero, brand, about, step, feature, integration, review, cta } =
-  homepage.data;
+const { hero, brand, step, feature } = homepage.data;
 const faq = await getEntry("sections", "faq");
 ---
 
 <Base>
   <Hero hero={hero} brand={brand} />
-  <!-- <About about={about} /> -->
   <Step step={step} />
   <Feature feature={feature} />
-  <!-- <Integration integration={integration} /> -->
-
-  <!-- <section class="section" data-aos="fade-up-sm" data-aos-delay="100">
-    <div class="container">
-      <p
-        set:html={markdownify(review.badge)}
-        class="text-tertiary text-xl lg:text-center mb-4"
-      />
-      <h2
-        set:html={markdownify(review.title)}
-        class="lg:text-center max-xl:h3 mb-16"
-      />
-      <Review />
-    </div>
-  </section> -->
   <CustomAccordion faqs={faq.data} client:load />
   <Testimonial />
   <Blog />
-  <!-- <HomeCta cta={cta} /> -->
 </Base>

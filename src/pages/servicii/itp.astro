@@ -1,22 +1,14 @@
 ---
 import Section1 from "@/components/features/Section1.astro";
-import Section2 from "@/components/features/Section2.astro";
-import Section3 from "@/components/features/Section3.astro";
-import Section4 from "@/components/features/Section4.astro";
-import Section5 from "@/components/features/Section5.astro";
-import Section6 from "@/components/features/Section6.astro";
 
-import Review from "@/components/homepage/Review.astro";
 import Testimonial from "@/components/homepage/Testimonial.astro";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
-import CallToAction from "@/partials/CallToAction.astro";
 import { getEntry } from "astro:content";
 import Compare from "@/layouts/components/pricing/Compare.astro";
+import AboutCta from "@/components/about/AboutCta.astro";
 
 const features = await getEntry("features", "-index");
-
-const call_to_action = await getEntry("sections", "call-to-action");
 
 const pricing = await getEntry("pricing", "-index");
 const { compareItp } = pricing.data;
@@ -27,13 +19,10 @@ const {
   description,
   hero,
   section_1,
-  section_2,
-  section_3,
-  section_4,
-  section_5,
-  section_6,
-  review,
 } = features.data;
+
+const about = await getEntry("about", "-index");
+const { call_to_action } = about.data;
 ---
 
 <Base title={title} meta_title={meta_title} description={description}>
@@ -59,10 +48,5 @@ const {
     <Compare compare={compareItp} />
   </section>
   <Testimonial />
-
-  <section>
-    <div class="container">
-      <hr class="w-full border-b border-t-0 border-dark" />
-    </div>
-  </section>
+  <AboutCta call_to_action={call_to_action} />
 </Base>
