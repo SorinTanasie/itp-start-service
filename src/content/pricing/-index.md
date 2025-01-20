@@ -107,6 +107,16 @@ compare:
         - details:
             - "Reglaj faruri"
             - "150 Lei"
+    - name: "Constatare"
+      feature:
+        - details:
+            - "Constatare Mecanica"
+            - "150 Lei"
+    - name: "Freon Auto"
+      feature:
+        - details:
+            - "Reincarcare"
+            - "150 Lei"
 
 review:
   title: "Trusted by leading <br> Startups in tech industry"
@@ -182,5 +192,43 @@ compareReglajFaruri:
     - feature:
       - details:
         - "Reglaj faruri"
+        - "150 Lei"
+
+compareConstatareMecanica:
+  title: "Preturi"
+
+  plans:
+    - name: "Luna Ianuarie"
+  pricing:
+    - "10% REDUCERE"
+  buttons:
+    - button:
+        enable: true
+        label: "Suna acum!"
+        link: "tel:+4077777777"
+
+  features:
+    - feature:
+      - details:
+        - "Constatare Mecanica"
+        - "150 Lei"
+
+compareIncarcareFreon:
+  title: "Preturi"
+
+  plans:
+    - name: "Luna Ianuarie"
+  pricing:
+    - "10% REDUCERE"
+  buttons:
+    - button:
+        enable: true
+        label: "Suna acum!"
+        link: "tel:+4077777777"
+
+  features:
+    - feature:
+      - details:
+        - "Incarcare Freon"
         - "150 Lei"
 

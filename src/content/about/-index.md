@@ -44,7 +44,7 @@ company:
     - "/images/homepage/brands/6.svg"
 
 call_to_action:
-  title: "Aici o sa pun detalii de contact ( in stanga maps )"
+  title: "Intra in contact cu noi!"
   description: "descriere?"
   button:
     enable: true

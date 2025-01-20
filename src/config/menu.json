@@ -16,6 +16,15 @@
         {
           "name": "Reglaj faruri",
           "url": "/servicii/reglaj-faruri"
+        },
+        {
+          "name": "Constatare Mecanica",
+          "url": "/servicii/constatare-mecanica"
+        },
+        
+        {
+          "name": "Incarcare Freon",
+          "url": "/servicii/incarcare-freon"
         }
       ]
     },

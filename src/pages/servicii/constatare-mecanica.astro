@@ -1,39 +1,25 @@
 ---
-import Section1 from "@/components/features/Section1.astro";
 import Section2 from "@/components/features/Section2.astro";
-import Section3 from "@/components/features/Section3.astro";
-import Section4 from "@/components/features/Section4.astro";
-import Section5 from "@/components/features/Section5.astro";
-import Section6 from "@/components/features/Section6.astro";
-
-import Review from "@/components/homepage/Review.astro";
 import Testimonial from "@/components/homepage/Testimonial.astro";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
-import CallToAction from "@/partials/CallToAction.astro";
 import { getEntry } from "astro:content";
 import Compare from "@/layouts/components/pricing/Compare.astro";
 import AboutCta from "@/components/about/AboutCta.astro";
 
 const features = await getEntry("features", "-index");
 
-const call_to_action = await getEntry("sections", "call-to-action");
-
 const pricing = await getEntry("pricing", "-index");
-const { compare } = pricing.data;
+const { compareConstatareMecanica } = pricing.data;
 
 const about = await getEntry("about", "-index");
-const { call_to_action: about_call_to_action } = about.data;
+const { call_to_action: aboutCallToAction } = about.data;
 
 const {
   title,
   meta_title,
   description,
   hero,
-  section_1,
-  section_2,
-  section_6,
-  section_incarcare_freon,
   section_constatare_mecanica,
 } = features.data;
 ---
@@ -55,24 +41,12 @@ const {
       />
     </div>
   </section>
-  <Section1 section_1={section_1} />
-  <div class="bg-theme-light/60 pt-6">
-    <Section2 section_2={section_2} />
-  </div>
-
-  <!-- Section 3 -->
-
-  <Section6 section_6={section_6} />
-  <div class="bg-theme-light pt-6">
 
   <Section2 section_2={section_constatare_mecanica} />
-  </div>
-
-  <Section1 section_1={section_incarcare_freon} />
 
   <section class="section">
-    <Compare compare={compare} />
+    <Compare compare={compareConstatareMecanica} />
   </section>
   <Testimonial />
-  <AboutCta call_to_action={about_call_to_action} />
+  <AboutCta call_to_action={aboutCallToAction} />
 </Base>

@@ -77,4 +77,36 @@ section_6:
     enable: true
     label: "Learn More"
     link: "#"
+
+section_constatare_mecanica:
+  badge: "Indiferent de Marca"
+  title: "Constatare Mecanica"
+  content: "Themefisher gives you the blocks needed to create a truly professional website for your SaaS."
+  image_1: "/images/features/feature-2.png"
+  image_2: "/images/features/feature-3.png"
+  features:
+    - "Mobile app easy management and access"
+    - "Handle the card easily and safely"
+    - "Strong security system"
+  button:
+    enable: true
+    label: "Learn More"
+    link: "#"
+
+section_incarcare_freon:
+  title: "Incarcare Freon"
+  content: "autoutilitare, auto, moto, Euro 6, 4x4"
+  image: "/images/features/feature-1.png"
+  highlights:
+    - "Mobile app easy management and access"
+    - "Handle the card easily and safely"
+    - "Strong security system"
+  features:
+    - "Seamless searching"
+    - "Get top 5% experts for your project"
+    - "Protected payment system"
+  button:
+    enable: true
+    label: "Learn More"
+    link: "#"
 ---
