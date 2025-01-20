@@ -50,4 +50,22 @@ call_to_action:
     enable: true
     label: "Suna-ne"
     link: "tel:+40738674397"
+
+team_members:
+  - name: Cosmin Badu
+    role: Inginer Sef
+    content: 'Acest container as vrea sa aiba o inaltime mai mica, vedem cand avem textele & pozele personalului'
+    image: "/images/about/user.png"
+    button:
+      enable: true
+      label: "Suna-ne"
+      link: "tel:+40738674397"
+  - name: Cosmin Badu
+    role: Inginer Sef
+    content: 'Descriere ceva'
+    image: "/images/about/user.png"
+    button:
+      enable: true
+      label: "Suna-ne"
+      link: "tel:+40738674397"
 ---

@@ -1,12 +1,20 @@
 ---
 import AboutCta from "@/components/about/AboutCta.astro";
 import Hero from "@/components/about/Hero.astro";
+import TeamMember from "@/components/about/TeamMember.astro";
 import Base from "@/layouts/Base.astro";
 import { getEntry } from "astro:content";
 
 const about = await getEntry("about", "-index");
-const { title, description, meta_title, image, hero, call_to_action } =
-  about.data;
+const {
+  title,
+  description,
+  meta_title,
+  image,
+  hero,
+  call_to_action,
+  team_members,
+} = about.data;
 ---
 
 <Base
@@ -16,9 +24,11 @@ const { title, description, meta_title, image, hero, call_to_action } =
   image={image}
 >
   <Hero hero={hero} />
-  <section class="section">
-    <h2 class="text-center mb-9">Aici poze cu personalul?</h2>
-  </section>
+  {
+    team_members.map((team_member: any) => (
+      <TeamMember team_member={team_member} />
+    ))
+  }
   <AboutCta call_to_action={call_to_action} />
 
   <section>
@@ -27,3 +37,14 @@ const { title, description, meta_title, image, hero, call_to_action } =
     </div>
   </section>
 </Base>
+
+
+<style is:global>
+  .team-member-container:nth-child(even) .team-member-inner-container {
+    flex-direction: row-reverse!important;
+  }
+
+  .team-member-container:nth-child(even) .team-member-inner-container .flex.flex-col.justify-between.h-full {
+    text-align: end;
+  }
+</style>

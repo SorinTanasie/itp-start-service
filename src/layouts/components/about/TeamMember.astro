@@ -1,0 +1,51 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import Button from "@/shortcodes/Button";
+import ImageMod from "../ImageMod.astro";
+
+const { team_member } = Astro.props;
+---
+
+<section class="section pt-14 team-member-container" data-aos="fade-up-sm">
+  <div class="container">
+    <div class="row max-lg:gy-5 items-stretch team-member-inner-container">
+      <div class="col-12 lg:col-6" data-aos="fade-right-sm">
+        <div class="relative">
+          <ImageMod
+            src={team_member.image}
+            alt="about"
+            width={609}
+            height={636}
+            class="h-full mx-auto"
+          />
+        </div>
+      </div>
+      <div class="col-12 lg:col-6" data-aos="fade-left-sm">
+        <div class="flex flex-col justify-between h-full">
+          <div>
+            <p
+              set:html={markdownify(team_member.role)}
+              class="mb-4 max-lg:text-center text-tertiary"
+            />
+            <h2
+              set:html={markdownify(team_member.name)}
+              class="mb-4 max-xl:h3 max-lg:text-center"
+            />
+            <p
+              set:html={markdownify(team_member.content)}
+              class="mb-4 max-lg:text-center text-text/70"
+            />
+          </div>
+
+          <div>
+            <Button
+              label={team_member.button.label}
+              link={team_member.button.link}
+              className="mt-6 lg:mt-10"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
