@@ -19,7 +19,7 @@ Daca masina trece cu succes toate testele, vei primi certificatul ITP valabil.
   - question: "De ce documente ai nevoie pentru itp?"
     answer: "Pentru efectuarea ITP-ului, ai nevoie de urmatoarele documente: <br>
 📌 Certificatul de inmatriculare (talonul masinii) – in original <br>
-📌 Cartea de identitate a vehiculului (CIV) – doar pentru persoanele juridice <br>
+📌 Cartea de identitate a vehiculului (CIV) <br>
 📌 Actul de identitate al proprietarului sau utilizatorului masinii <br>
 📌 Asigurarea RCA valabila <br>"
   - question: "Se poate plati cu cardul?"
