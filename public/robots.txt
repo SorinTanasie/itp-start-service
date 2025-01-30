@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://itp-start-service.ro/sitemap-index.xml
+
 Disallow: /api/*
