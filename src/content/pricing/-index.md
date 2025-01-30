@@ -98,9 +98,6 @@ compare:
             - "Moto"
             - "120 Lei"
         - details:
-            - "4x4"
-            - "140 Lei"
-        - details:
             - "Autoutilitara"
             - "180 Lei"
         - details:
@@ -174,9 +171,6 @@ compareItp:
         - details:
             - "Moto"
             - "120 Lei"
-        - details:
-            - "4x4"
-            - "140 Lei"
         - details:
             - "Autoutilitara"
             - "180 Lei"
