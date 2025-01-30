@@ -83,6 +83,9 @@ compare:
     - name: "ITP"
       feature:
         - details:
+            - "ITP cu ridicare autovehicul"
+            - "In functie de distanta*"
+        - details:
             - "Autoturism"
             - "150 Lei"
         - details:
@@ -156,6 +159,9 @@ compareItp:
 
   features:
     - feature:
+        - details:
+            - "ITP cu ridicare autovehicul"
+            - "In functie de distanta*"
         - details:
             - "Autoturism"
             - "150 Lei"

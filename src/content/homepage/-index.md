@@ -59,8 +59,8 @@ about:
 step:
   title: "ITP Rapid în 3 Pași – Cu sau Fără Programare!"
   steps:
-    - title: "PROGRAMEAZĂ-TE TELEFONIC SAU VINO DIRECT LA NOI"
-      description: "Alege ziua și ora care ți se potrivește. Proces simplu, fără complicații!"
+    - title: "PROGRAMEAZĂ-TE TELEFONIC, <br> VINO DIRECT LA NOI SAU VENIM NOI LA TINE"
+      description: "Alege ziua și ora care ți se potrivește. Proces simplu, fără complicații! In caz ca nu poti ajunge, echipa noastra iti va prelua masina si vei avea totul gata"
     - title: "ADU MASINA LA SERVICE"
       description: "Specialiștii noștri efectuează verificarea rapid, respectând toate normele legale."
     - title: "IN 20 DE MINUTE, PLECI CU ITP-UL VALABIL!"
