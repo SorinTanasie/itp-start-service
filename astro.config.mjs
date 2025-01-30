@@ -13,7 +13,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: config.site.base_url ? config.site.base_url : "http://itp-start-service.ro",
+  site: config.site.base_url ? config.site.base_url : "https://itp-start-service.ro",
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   image: {
