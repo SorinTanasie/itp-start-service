@@ -29,10 +29,6 @@
       ]
     },
     {
-      "name": "Despre noi",
-      "url": "/about"
-    },
-    {
       "name": "Contact",
       "url": "/contact"
     }
@@ -41,10 +37,6 @@
     {
       "title": "Companie",
       "children": [
-        {
-          "name": "About",
-          "url": "/about"
-        },
         {
           "name": "Contact",
           "url": "/contact"

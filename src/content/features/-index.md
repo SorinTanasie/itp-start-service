@@ -1,42 +1,41 @@
 ---
-title: "Servicii"
-meta_title: "Servicii"
-description: "This is description"
+title: "Servicii ITP, Diagnoza Auto, Reglaj Faruri | ITP Start Service"
+meta_title: "Servicii ITP, Diagnoza Auto, Reglaj Faruri | ITP Start Service"
+description: "Oferim servicii profesionale: ITP, diagnoza auto, reglaj faruri, constatare mecanica si incarcare freon. Rapid, sigur si fara batai de cap!"
 hero:
-  title: "Servicii ITP Start Service"
-  content: "ITP Start Service gives you the blocks needed to create a truly professional website for your SaaS is a long established fact that a reader."
+  title: "Servicii ITP Profesionale <br> Bucuresti Sector 5"
+  content: "La ITP Start Service, oferim servicii rapide si sigure pentru masina ta! Fie ca ai nevoie de inspectie ITP, diagnoza auto sau incarcare freon, suntem aici sa te ajutam. Totul simplu, eficient si fara batai de cap!"
 
 section_1:
-  title: "ITP"
-  content: "autoutilitare, auto, moto, Euro 6, 4x4"
-  image: "/images/features/feature-1.png"
+  title: "ITP - Inspectia Tehnica Periodica"
+  content: "AUTOUTILITARE, AUTO, MOTO, EURO 6, 4x4 <br> <br> Asiguram inspectia tehnica obligatorie pentru orice tip de vehicul, conform normelor RAR. Vino la noi si obtine certificatul ITP rapid, fara batai de cap!"
+  image: "/images/features/itp_resized.webp"
   highlights:
     - "Mobile app easy management and access"
     - "Handle the card easily and safely"
     - "Strong security system"
   features:
-    - "Seamless searching"
-    - "Get top 5% experts for your project"
-    - "Protected payment system"
+    - "Disponibil atat cu, cat si fara programare"
+    - "Durata: aproximativ 20 de minute"
+    - "Verificare rapida si sigura"
   button:
     enable: true
-    label: "Learn More"
-    link: "#"
+    label: "Fa-ti programare!"
+    link: "tel:+40793046297"
 
 section_2:
   badge: "Multi brand"
-  title: "Diagnoza auto"
-  content: "Themefisher gives you the blocks needed to create a truly professional website for your SaaS."
-  image_1: "/images/features/feature-2.png"
-  image_2: "/images/features/feature-3.png"
+  title: "Diagnoza Auto"
+  content: "Descopera rapid problemele ascunse ale masinii tale cu o diagnoza computerizata profesionala. Evita defectiunile costisitoare si mentine-ti masina in stare perfecta!"
+  image_1: "/images/features/diagnoza.webp"
   features:
-    - "Mobile app easy management and access"
-    - "Handle the card easily and safely"
-    - "Strong security system"
+    - "Testare computerizata completa"
+    - "Detectare rapida a erorilor"
+    - "Optimizare pentru performanta maxima"
   button:
     enable: true
-    label: "Learn More"
-    link: "#"
+    label: "Programeaza o diagnoza!"
+    link: "tel:+40793046297"
 
 section_3:
   title: "Mutual Fund"
@@ -63,50 +62,49 @@ review:
 
 section_6:
   title: "Reglaj faruri"
-  content: "Themefisher gives you the blocks needed to create a truly professional website for your SaaS."
-  image: "/images/features/feature-1.png"
+  content: "Asiguram reglajul corect al farurilor pentru siguranta ta pe drum. Vino sa verificam si ajustam intensitatea si directia luminilor tale!"
+  image: "/images/features/reglaj_faruri_resized.webp"
   highlights:
     - "Mobile app easy management and access"
-    - "Handle the card easily and safely"
-    - "Strong security system"
+    - "Respecta normele de siguranta rutiera"
+    - "Compatibil cu toate tipurile de faruri"
   features:
-    - "Seamless searching"
-    - "Get top 5% experts for your project"
-    - "Protected payment system"
+    - "Ajustare precisa pentru vizibilitate optima"
+    - "Respecta normele de siguranta rutiera"
+    - "Compatibil cu toate tipurile de faruri"
   button:
     enable: true
-    label: "Learn More"
-    link: "#"
+    label: "Verifica-ti farurile acum!"
+    link: "tel:+40793046297"
 
 section_constatare_mecanica:
   badge: "Indiferent de Marca"
   title: "Constatare Mecanica"
-  content: "Themefisher gives you the blocks needed to create a truly professional website for your SaaS."
-  image_1: "/images/features/feature-2.png"
-  image_2: "/images/features/feature-3.png"
+  content: "Simti ca ceva nu functioneaza corect? Specialistii nostri efectueaza o verificare detaliata pentru a identifica si remedia orice problema mecanica!"
+  image_1: "/images/features/constatare_mecanica.webp"
   features:
-    - "Mobile app easy management and access"
-    - "Handle the card easily and safely"
-    - "Strong security system"
+    - "Inspectie amanuntita a componentelor esentiale"
+    - "Identificare rapida a problemelor"
+    - "Recomandari pentru intretinere optima"
   button:
     enable: true
-    label: "Learn More"
-    link: "#"
+    label: "Fa o verificare acum!"
+    link: "tel:+40793046297"
 
 section_incarcare_freon:
   title: "Incarcare Freon"
-  content: "autoutilitare, auto, moto, Euro 6, 4x4"
-  image: "/images/features/feature-1.png"
+  content: "Daca aerul conditionat nu mai raceste eficient, poate fi timpul pentru o incarcare cu freon. Revino la confortul deplin in masina ta!"
+  image: "/images/features/incarcare_freon.webp"
   highlights:
     - "Mobile app easy management and access"
     - "Handle the card easily and safely"
     - "Strong security system"
   features:
-    - "Seamless searching"
-    - "Get top 5% experts for your project"
-    - "Protected payment system"
+    - "Verificare si completare freon"
+    - "Service specializat pentru instalatia AC"
+    - "Racire optima pentru confort maxim"
   button:
     enable: true
-    label: "Learn More"
-    link: "#"
+    label: "Programeaza o incarcare!"
+    link: "tel:+40793046297"
 ---

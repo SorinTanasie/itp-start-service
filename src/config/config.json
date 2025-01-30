@@ -1,14 +1,14 @@
 {
   "site": {
-    "title": "ITP start service",
-    "base_url": "https://blazex-astro.vercel.app/",
+    "title": "ITP Bucuresti Sector 5 – Servicii Rapide si Sigure | ITP Start Service",
+    "base_url": "https://itp-start-servoce.rp/",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
-    "logo": "/images/itp_logo_resized_2.jpg",
+    "favicon": "/images/itp_logo_resized_2.jpg",
+    "logo": "",
     "logo_width": "60",
     "logo_height": "60",
-    "logo_text": "ITP start service"
+    "logo_text": "ITP  START SERVICE"
   },
 
   "settings": {
@@ -31,8 +31,8 @@
 
   "navigation_button": {
     "enable": true,
-    "label": "0777 777 777",
-    "link": "tel:+40777777777"
+    "label": "0793046297",
+    "link": "tel:+40793046297"
   },
 
   "disqus": {
@@ -42,8 +42,8 @@
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
-    "meta_image": "/images/og-image.png",
-    "meta_description": "Sass theme for Astro"
+    "meta_author": "ITP Start Service",
+    "meta_image": "/images/itp_logo_resized_2.jpg",
+    "meta_description": "Ai nevoie de ITP in Bucuresti Sector 5? ITP Start Service iti ofera servicii rapide si sigure, cu sau fara programare. Obtine certificatul ITP in doar 20 de minute!"
   }
 }

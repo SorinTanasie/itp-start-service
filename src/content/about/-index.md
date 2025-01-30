@@ -44,12 +44,20 @@ company:
     - "/images/homepage/brands/6.svg"
 
 call_to_action:
-  title: "Intra in contact cu noi!"
-  description: "descriere?"
+  title: "Hai la Service! Programeaza-te Acum!"
+  description: " 📍 Ne gasesti in Bucuresti Sector 5, Strada Mărgeanului 59 <br>
+📞 Contact: 0793 046 297 <br>
+<br>
+📅 Program: <br> 
+Luni - Vineri: 08:00 - 20:00 <br>
+Sambata: 08:00 - 14:00 <br>
+Duminica: Inchis
+
+"
   button:
     enable: true
-    label: "Suna-ne"
-    link: "tel:+40738674397"
+    label: "Suna-ne!"
+    link: "tel:+40793046297"
 
 team_members:
   - name: Cosmin Badu
@@ -59,7 +67,7 @@ team_members:
     button:
       enable: true
       label: "Suna-ne"
-      link: "tel:+40738674397"
+      link: "tel:+40793046297"
   - name: Cosmin Badu
     role: Inginer Sef
     content: 'Descriere ceva'
@@ -67,5 +75,5 @@ team_members:
     button:
       enable: true
       label: "Suna-ne"
-      link: "tel:+40738674397"
+      link: "tel:+40793046297"
 ---

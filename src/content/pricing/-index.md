@@ -77,36 +77,53 @@ compare:
     - button:
         enable: true
         label: "Suna acum!"
-        link: "tel:+4077777777"
+        link: "tel:+40793046297"
 
   features:
     - name: "ITP"
       feature:
         - details:
-            - "Autoutilitare"
-            - "240 Lei"
+            - "Autoturism"
+            - "150 Lei"
         - details:
-            - "Auto"
-            - "200 Lei"
+            - "Autoturism 4x4"
+            - "170 Lei"
+        - details:
+            - "Autoturism E6"
+            - "170 Lei"
         - details:
             - "Moto"
-            - "180 Lei"
-        - details:
-            - "Euro 6"
-            - "140 Lei"
+            - "120 Lei"
         - details:
             - "4x4"
             - "140 Lei"
+        - details:
+            - "Autoutilitara"
+            - "180 Lei"
+        - details:
+            - "Autoutilitara E6"
+            - "200 Lei"
+    - name: "Revenire ITP"
+      feature:
+        - details:
+            - "Siguranta"
+            - "50 Lei"
+        - details:
+            - "Poluare"
+            - "50 Lei"
+        - details:
+            - "Lumini"
+            - "50 Lei"
     - name: "Diagnoza"
       feature:
         - details:
             - "Diagnoza Auto"
-            - "140 lei"
+            - "80 lei"
     - name: "Reglaj"
       feature:
         - details:
             - "Reglaj faruri"
-            - "150 Lei"
+            - "80 Lei"
     - name: "Constatare"
       feature:
         - details:
@@ -115,8 +132,8 @@ compare:
     - name: "Freon Auto"
       feature:
         - details:
-            - "Reincarcare"
-            - "150 Lei"
+            - "Freon"
+            - "140 Lei"
 
 review:
   title: "Trusted by leading <br> Startups in tech industry"
@@ -135,25 +152,40 @@ compareItp:
     - button:
         enable: true
         label: "Suna acum!"
-        link: "tel:+4077777777"
+        link: "tel:+40793046297"
 
   features:
-      - feature:
+    - feature:
         - details:
-            - "Autoutilitare"
-            - "240 Lei"
+            - "Autoturism"
+            - "150 Lei"
         - details:
-            - "Auto"
-            - "200 Lei"
+            - "Autoturism 4x4"
+            - "170 Lei"
+        - details:
+            - "Autoturism E6"
+            - "170 Lei"
         - details:
             - "Moto"
-            - "180 Lei"
-        - details:
-            - "Euro 6"
-            - "140 Lei"
+            - "120 Lei"
         - details:
             - "4x4"
             - "140 Lei"
+        - details:
+            - "Autoutilitara"
+            - "180 Lei"
+        - details:
+            - "Autoutilitara E6"
+            - "200 Lei"
+        - details:
+            - "Revenire ITP Siguranta"
+            - "50 Lei"
+        - details:
+            - "Revenire ITP Poluare"
+            - "50 Lei"
+        - details:
+            - "Revenire ITP Lumini"
+            - "50 Lei"
 
 
 compareDiagnoza:
@@ -167,13 +199,13 @@ compareDiagnoza:
     - button:
         enable: true
         label: "Suna acum!"
-        link: "tel:+4077777777"
+        link: "tel:+40793046297"
 
   features:
     - feature:
         - details:
             - "Diagnoza Auto"
-            - "140 lei"
+            - "80 lei"
 
 compareReglajFaruri:
   title: "Preturi"
@@ -186,13 +218,13 @@ compareReglajFaruri:
     - button:
         enable: true
         label: "Suna acum!"
-        link: "tel:+4077777777"
+        link: "tel:+40793046297"
 
   features:
     - feature:
       - details:
         - "Reglaj faruri"
-        - "150 Lei"
+        - "80 Lei"
 
 compareConstatareMecanica:
   title: "Preturi"
@@ -205,13 +237,13 @@ compareConstatareMecanica:
     - button:
         enable: true
         label: "Suna acum!"
-        link: "tel:+4077777777"
+        link: "tel:+40793046297"
 
   features:
     - feature:
       - details:
         - "Constatare Mecanica"
-        - "150 Lei"
+        - "80 Lei"
 
 compareIncarcareFreon:
   title: "Preturi"
@@ -224,11 +256,11 @@ compareIncarcareFreon:
     - button:
         enable: true
         label: "Suna acum!"
-        link: "tel:+4077777777"
+        link: "tel:+40793046297"
 
   features:
     - feature:
       - details:
         - "Incarcare Freon"
-        - "150 Lei"
+        - "140 Lei"
 

@@ -17,24 +17,9 @@ const { section_6 } = Astro.props;
             src={section_6.image}
             alt="about"
             width={609}
-            height={636}
-            class="h-full mx-auto"
+            height={701}
+            class="h-full mx-auto rounded-lg"
           />
-          <div
-            class="absolute bottom-10 left-8 md:left-24 lg:left-10 flex flex-col gap-2"
-          >
-            {
-              section_6.highlights.map((item: string) => (
-                <div class="flex items-center mb-1 last:mb-0 bg-light w-fit rounded-full p-3 py-1">
-                  <TiTick className="text-light bg-tertiary rounded-full mr-2 text-lg max-lg:text-xs" />
-                  <p
-                    set:html={markdownify(item)}
-                    class="text-lg max-lg:text-xs"
-                  />
-                </div>
-              ))
-            }
-          </div>
         </div>
       </div>
       <div class="col-12 lg:col-6" data-aos="fade-left-sm">

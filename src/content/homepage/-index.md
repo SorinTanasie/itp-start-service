@@ -1,11 +1,12 @@
 ---
 hero:
-  title: "IPT start service <br> cel mai bun"
-  content: "ITP is driven by a shared commitment to excellence, and a relentless pursuit of customer success."
+  title: "ITP București <br> Sector 5"
+  subtitle: "Rapid, Sigur, Fără Bătăi de Cap!"
+  content: "Ai nevoie de Inspecția Tehnică Periodică? La ITP Start Service, îți oferim servicii rapide de ITP, fie că vii cu programare sau direct la service! Fără cozi, fără stres – pleci în 20 de minute cu certificatul ITP valabil."
   image: "/images/homepage/service.jpg"
   button_1:
     enable: true
-    label: "Contacteaza-ne"
+    label: "Programează-te acum"
     link: "/contact"
   button_2:
     enable: true
@@ -56,28 +57,32 @@ about:
       value: "Hours Saved Per Month"
 
 step:
-  title: "ITP in 3 pasi simplii"
+  title: "ITP Rapid în 3 Pași – Cu sau Fără Programare!"
   steps:
-    - title: "Programeaza-te"
-      description: "The ability for the integrating them to marketing team to see all results."
-    - title: "Adu masina la ora stabilita"
-      description: "The ability for the integrating them elit to marketing team to see all results."
-    - title: "In 20 minute ai si terminat"
-      description: "The ability for the integrating them elit to marketing team to see all results."
+    - title: "PROGRAMEAZĂ-TE TELEFONIC SAU VINO DIRECT LA NOI"
+      description: "Alege ziua și ora care ți se potrivește. Proces simplu, fără complicații!"
+    - title: "ADU MASINA LA SERVICE"
+      description: "Specialiștii noștri efectuează verificarea rapid, respectând toate normele legale."
+    - title: "IN 20 DE MINUTE, PLECI CU ITP-UL VALABIL!"
+      description: "Primesti certificatul ITP pe loc. Rapid, sigur, fara stres!"
   start: "BlazeX is driven by a shared commitment to excellence, and a relentless pursuit of customer success."
   button:
     enable: true
-    label: "Suna acum"
-    link: "/pricing"
+    label: "Suna acum!"
+    link: "tel:+40793046297"
 
 feature:
-  title: "Ceva de laudat legat de itp"
+  title: "ITP Flexibil si Rapid – Tu Alegi Cum Il Faci!"
   image: "/images/homepage/mecanic2.jpg"
-  content: "Themefisher gives you the blocks needed to create a truly professional website for your SaaS."
+  content: "La ITP Start Service, stim ca timpul tau este pretios. De aceea, iti oferim doua optiuni simple pentru a face ITP-ul"
   points:
-    - "Mobile app easy management and access"
-    - "Handle the card easily and safely"
-    - "Strong security system"
+    
+    - title: "Cu programare"
+      description: " – economisesti timp si vii la ora stabilita, fara asteptare."
+    - title: "Fara programare"
+      description: " – te primim imediat ce ajungi, in functie de disponibilitate."
+    - title: "Proces rapid, fara stres"
+      description: " – pleci in 20 de minute cu certificatul ITP valabil."
   action:
     title: "Take action based on data & get results."
     review:

@@ -32,7 +32,16 @@ const { feature } = Astro.props;
                 data-aos-delay={300 + index * 100}
               >
                 <IoMdCheckmark className="text-tertiary mr-4 text-2xl" />
-                <li set:html={markdownify(p)} class="text-xl last:mb-0" />
+                <li class="text-xl last:mb-0">
+                  <p
+                    set:html={markdownify(p.title)}
+                    class="inline font-bold text-lg"
+                  />
+                  <p
+                    set:html={markdownify(p.description)}
+                    class="inline text-lg"
+                  />
+                </li>
               </div>
             ))
           }
