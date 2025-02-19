@@ -221,7 +221,7 @@ const cta = await getEntry("sections", "call-to-action");
         })
           .then(async (response) => {
             let json = await response.json();
-            if (response.success) {
+            if (response.success || response.status === 200) {
               result.classList.add(
                 "text-white", "bg-green-500", "p-4", "mb-5", "rounded-lg"
               );
