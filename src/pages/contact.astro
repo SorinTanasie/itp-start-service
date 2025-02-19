@@ -223,20 +223,23 @@ const cta = await getEntry("sections", "call-to-action");
             let json = await response.json();
             if (response.success) {
               result.classList.add(
-                "text-white bg-green-500 p-4 mb-5 rounded-lg"
+                "text-white", "bg-green-500", "p-4", "mb-5", "rounded-lg"
               );
               result.innerHTML =
                 "Am primit mesajul si te vom contacta in curand!";
             } else {
               console.log(response);
               result.classList.add(
-                "text-white bg-red-500 p-4 mb-5 rounded-lg"
+                "text-white", "bg-red-500","p-4","mb-5","rounded-lg"
               );
               result.innerHTML = json.message;
             }
           })
           .catch((error) => {
             console.log(error);
+            result.classList.add(
+                "text-white", "bg-red-500","p-4","mb-5","rounded-lg"
+              );
             result.innerHTML = "Ceva nu a functionat. Suna-ne!";
           })
           .then(function () {
