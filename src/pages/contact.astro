@@ -189,8 +189,7 @@ const cta = await getEntry("sections", "call-to-action");
   }
 </style>
 
-<script astro:page-load>
-  // use astro:page-load event if you are using View Transitions
+<script>
 
   document.addEventListener(
     "DOMContentLoaded",
@@ -221,7 +220,7 @@ const cta = await getEntry("sections", "call-to-action");
         })
           .then(async (response) => {
             let json = await response.json();
-            if (response.success || response.status === 200) {
+            if (response?.success ||response?.status === 200) {
               result.classList.add(
                 "text-white", "bg-green-500", "p-4", "mb-5", "rounded-lg"
               );
@@ -230,7 +229,7 @@ const cta = await getEntry("sections", "call-to-action");
             } else {
               console.log(response);
               result.classList.add(
-                "text-white", "bg-red-500","p-4","mb-5","rounded-lg"
+                "text-white", "bg-red-500", "p-4", "mb-5", "rounded-lg"
               );
               result.innerHTML = json.message;
             }
@@ -238,7 +237,7 @@ const cta = await getEntry("sections", "call-to-action");
           .catch((error) => {
             console.log(error);
             result.classList.add(
-                "text-white", "bg-red-500","p-4","mb-5","rounded-lg"
+                "text-white", "bg-red-500", "p-4", "mb-5", "rounded-lg"
               );
             result.innerHTML = "Ceva nu a functionat. Suna-ne!";
           })
