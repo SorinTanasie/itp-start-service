@@ -189,8 +189,7 @@ const cta = await getEntry("sections", "call-to-action");
   }
 </style>
 
-<script astro:page-load>
-  // use astro:page-load event if you are using View Transitions
+<script>
 
   document.addEventListener(
     "DOMContentLoaded",
@@ -221,7 +220,7 @@ const cta = await getEntry("sections", "call-to-action");
         })
           .then(async (response) => {
             let json = await response.json();
-            if (response.success || response.status === 200) {
+            if (response?.success || response?.status === 200) {
               result.classList.add(
                 "text-white", "bg-green-500", "p-4", "mb-5", "rounded-lg"
               );
