@@ -63,7 +63,7 @@ review:
 section_6:
   title: "Reglaj faruri"
   content: "Asiguram reglajul corect al farurilor pentru siguranta ta pe drum. Vino sa verificam si ajustam intensitatea si directia luminilor tale!"
-  image: "/images/features/reglaj_faruri_resized.webp"
+  image: "/images/features/reglaj_faruri_start_service.webp"
   highlights:
     - "Mobile app easy management and access"
     - "Respecta normele de siguranta rutiera"
@@ -94,7 +94,7 @@ section_constatare_mecanica:
 section_incarcare_freon:
   title: "Incarcare Freon"
   content: "Daca aerul conditionat nu mai raceste eficient, poate fi timpul pentru o incarcare cu freon. Revino la confortul deplin in masina ta!"
-  image: "/images/features/incarcare_freon.webp"
+  image: "/images/features/incarcare_freon_start_service.webp"
   highlights:
     - "Mobile app easy management and access"
     - "Handle the card easily and safely"
