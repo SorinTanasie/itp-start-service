@@ -3,7 +3,7 @@ hero:
   title: "ITP București <br> Sector 5"
   subtitle: "Rapid, Sigur, Fără Bătăi de Cap!"
   content: "Ai nevoie de Inspecția Tehnică Periodică? La ITP Start Service, îți oferim servicii rapide de ITP, fie că vii cu programare sau direct la service! Fără cozi, fără stres – pleci în 20 de minute cu certificatul ITP valabil."
-  image: "/images/homepage/service.jpg"
+  image: "/images/homepage/service.webp"
   button_1:
     enable: true
     label: "Programează-te acum"
