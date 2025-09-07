@@ -26,13 +26,13 @@ const { feature } = Astro.props;
         <ul>
           {
             feature.points.map((p: any, index: number) => (
-              <div
-                class="flex items-center mb-4"
+              <li
+                class="text-xl last:mb-0 flex items-center mb-4"
                 data-aos="fade-up-sm"
                 data-aos-delay={300 + index * 100}
               >
                 <IoMdCheckmark className="text-tertiary mr-4 text-2xl" />
-                <li class="text-xl last:mb-0">
+                <div>
                   <p
                     set:html={markdownify(p.title)}
                     class="inline font-bold text-lg"
@@ -41,8 +41,8 @@ const { feature } = Astro.props;
                     set:html={markdownify(p.description)}
                     class="inline text-lg"
                   />
-                </li>
-              </div>
+                </div>
+              </li>
             ))
           }
         </ul>
