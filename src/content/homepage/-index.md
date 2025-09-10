@@ -73,7 +73,7 @@ step:
 
 feature:
   title: "ITP Flexibil si Rapid – Tu Alegi Cum Il Faci!"
-  image: "/images/homepage/mecanic2.jpg"
+  image: "/images/homepage/poza_itp_tableta.jpeg"
   content: "La ITP Start Service, stim ca timpul tau este pretios. De aceea, iti oferim doua optiuni simple pentru a face ITP-ul"
   points:
     
