@@ -87,7 +87,7 @@ compare:
             - "In functie de distanta*"
         - details:
             - "Autoturism"
-            - "150 Lei"
+            - "170 Lei"
         - details:
             - "Autoturism 4x4"
             - "170 Lei"
@@ -96,10 +96,10 @@ compare:
             - "170 Lei"
         - details:
             - "Moto"
-            - "120 Lei"
+            - "150 Lei"
         - details:
             - "Autoutilitara"
-            - "180 Lei"
+            - "200 Lei"
         - details:
             - "Autoutilitara E6"
             - "200 Lei"
@@ -161,7 +161,7 @@ compareItp:
             - "In functie de distanta*"
         - details:
             - "Autoturism"
-            - "150 Lei"
+            - "170 Lei"
         - details:
             - "Autoturism 4x4"
             - "170 Lei"
@@ -170,10 +170,10 @@ compareItp:
             - "170 Lei"
         - details:
             - "Moto"
-            - "120 Lei"
+            - "150 Lei"
         - details:
             - "Autoutilitara"
-            - "180 Lei"
+            - "200 Lei"
         - details:
             - "Autoutilitara E6"
             - "200 Lei"
